@@ -1,7 +1,7 @@
 /* 1. Basic Setup */
 body {
-  font-family: 'Short Stack', cursive;
-  background-color: #fadee7; /* Light grey background */
+  font-family: 'Short Stack';
+  background-color: hwb(341 87% 3%); /* Light grey background */
   padding: 40px;
   color: #482d38;
 }
