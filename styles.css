@@ -1,75 +1,219 @@
 /* 1. Basic Setup */
+/* GENERAL PAGE STYLING */
 body {
-  font-family: 'Short Stack';
-  background-color: hwb(341 87% 3%); /* Light grey background */
+  font-family: 'Short Stack', cursive;
+  background-color: #fdf0f5; /* soft pink aesthetic */
   padding: 40px;
   color: #482d38;
+  margin: 0;
 }
 
-/* 2. The Grid Layout */
-.book-grid {
-  display: grid;
-  /* This makes the grid responsive: it fits as many 250px columns as possible */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* 3. The Individual Card */
-.book-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Hover Effect: Lifts the card up */
-.book-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* 4. The Image Area */
-.book-cover img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover; /* Keeps image from looking squished */
-  border-bottom: 2px solid #eee;
-}
-
-/* 5. Text Styling */
-.book-info {
-  padding: 20px;
+/* HEADINGS */
+h1 {
   text-align: center;
+  background-color: #ffc8dd;
+  padding: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ff8fab;
+  margin-bottom: 30px;
+  border-radius: 15px;
 }
 
-.book-info h3 {
-  margin: 0 0 10px;
-  font-size: 1.4rem;
-  color: #333;
+h2 {
+  color: #b5838d;
+  border-bottom: 2px solid #ffb3c6;
+  padding-bottom: 5px;
+  margin-top: 40px;
 }
 
-.author {
-  color: #777;
-  font-style: italic;
-  margin-bottom: 15px;
+/* PARAGRAPHS */
+p {
+  line-height: 1.6;
+  margin: 15px 0;
 }
 
-/* 6. The Button */
-.btn {
-  background-color: #3498db; /* Change this to your project color! */
+/* LIST */
+ul {
+  background-color: #ffe5ec;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  margin: 20px auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffb3c6;
+}
+
+/* IMAGES */
+img {
+  width: 200px;
+  height: 300px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ff8fab;
+  border-radius: 10px;
+  margin: 10px;
+  float: left; /* REQUIRED property */
+}
+
+/* CLEAR FLOAT (prevents layout issues) */
+br {
+  clear: both;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: #c9184a;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff4d6d;
+}
+
+/* BUTTON */
+input[type="button"] {
+  background-color: #ff8fab;
   color: white;
   border: none;
   padding: 10px 20px;
-  border-radius: 5px;
+  margin: 20px 0;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
-.btn:hover {
-  background-color: #2980b9;
+input[type="button"]:hover {
+  background-color: #ff4d6d;
+}
+
+/* BOOK SECTIONS (makes each book look like a card) */
+h2 + a + br + b + p {
+  display: block;
+  background-color: white;
+  padding: 15px;
+  margin: 20px 0;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffd6e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* OPTIONAL: CENTER CONTENT */
+body > * {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FOOTER TEXT */
+h3 {
+  text-align: center;
+  margin-top: 50px;
+
+  /* GENRE GRID (for homepage) */
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* EACH GENRE CARD */
+.genre-card {
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffd6e0;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* IMAGE */
+.genre-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.genre-card h2 {
+  margin: 10px 0;
+}
+
+/* DESCRIPTION */
+.genre-card p {
+  font-size: 0.95rem;
+}
+
+/* LINK BUTTON */
+.genre-card a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #ff8fab;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+/* MOBILE FRIENDLY */
+@media (max-width: 800px) {
+  .genre-grid {
+    grid-template-columns: 1fr; /* stack on small screens */
+  }
+
+  /* GRID CONTAINER */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* BOOK CARD */
+.book-card {
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffd6e0;
+  border-radius: 12px;
+  padding: 15px;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+/* HOVER EFFECT */
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+/* IMAGE INSIDE CARD */
+.book-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  float: none; /* override float from earlier */
+  margin: 0;
+}
+
+/* TEXT */
+.book-card h3 {
+  margin: 10px 0;
+  color: #b5838d;
+}
+
+/* BUTTON LINK STYLE */
+.book-card a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #ff8fab;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+}
 }
