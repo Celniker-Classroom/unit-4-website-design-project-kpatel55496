@@ -7,7 +7,38 @@ body {
   color: #482d38;
   margin: 0;
 }
+body{
+  margin: 0px;
+}
 
+main{
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.navbar ul{
+list-style-type: none;
+background-color:#b5838d;
+padding:0px;
+margin:0px;
+overflow: hidden;
+
+}
+
+.navbar a{
+  color: #fdf0f5;
+  text-decoration: none;
+  padding:15px;
+  display:block;
+  text-align: center;
+}
+
+.navbar a:hover{
+  background-color:#9c7079;
+}
+.navbar li{
+  float:left;
+}
 /* HEADINGS */
 h1 {
   text-align: center;
@@ -215,5 +246,9 @@ h3 {
   padding: 8px 15px;
   border-radius: 8px;
 }
+
+
+
+
 }
 }
