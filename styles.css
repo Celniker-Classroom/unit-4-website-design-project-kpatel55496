@@ -3,7 +3,7 @@
 body {
   font-family: 'Short Stack', cursive;
   background-color: #fdf0f5; /* soft pink aesthetic */
-  padding: 40px;
+  padding: 0px;
   color: #482d38;
   margin: 0;
 }
@@ -22,7 +22,16 @@ background-color:#b5838d;
 padding:0px;
 margin:0px;
 overflow: hidden;
+width:auto;
+border: none;
+border-radius: 0;
 
+}
+
+.navbar {
+    max-width: 100% !important; /* Overrides the 800px limit */
+    width: 100%;
+    margin: 0;
 }
 
 .navbar a{
@@ -151,6 +160,7 @@ h3 {
   gap: 30px;
   margin-top: 30px;
 }
+
 
 /* EACH GENRE CARD */
 .genre-card {
