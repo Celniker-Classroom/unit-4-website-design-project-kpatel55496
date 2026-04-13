@@ -32,6 +32,20 @@ border-radius: 0;
     max-width: 100% !important; /* Overrides the 800px limit */
     width: 100%;
     margin: 0;
+    .navbar {
+      position: fixed; /* Keeps it at the top */
+      top: 0;
+      z-index: 1000;
+      transition: 0.4s; /* This makes the shrinking look smooth! */
+      width: 100%;
+      margin: 0;
+    }
+    
+    /* Because the nav is now 'fixed', we need to push the content down 
+       so it doesn't hide behind the navbar */
+    body {
+      padding-top: 60px; 
+    }
 }
 
 .navbar a{
