@@ -15,6 +15,9 @@ main{
   margin-left:20px;
   margin-right:20px;
 }
+body {
+  padding-top: 120px;
+}
 
 .navbar ul{
 list-style-type: none;
@@ -46,6 +49,22 @@ border-radius: 0;
     body {
       padding-top: 60px; 
     }
+}
+
+#navbar {
+  padding: 80px 10px;
+  transition: 0.4s; /* smooth shrinking */
+  position: static;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  left: 0;
+}
+
+body > *:not(#navbar) {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navbar a{
