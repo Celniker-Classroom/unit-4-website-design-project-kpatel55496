@@ -1,141 +1,109 @@
-/* 1. Basic Setup */
-/* GENERAL PAGE STYLING */
+/* ===== RESET & BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Short Stack', cursive;
-  background-color: #fdf0f5; /* soft pink aesthetic */
-  padding: 0px;
-  color: #482d38;
+  background-color: #fdf0f5;
   margin: 0;
-}
-body{
-  margin: 0px;
-}
-
-main{
-  margin-left:20px;
-  margin-right:20px;
-}
-body {
-  padding-top: 120px;
+  padding: 0;
+  color: #482d38;
+  padding-top: 110px; /* space for fixed header */
 }
 
-.navbar ul{
-list-style-type: none;
-background-color:#b5838d;
-padding:0px;
-margin:0px;
-overflow: hidden;
-width:auto;
-border: none;
-border-radius: 0;
-
-}
-
-.navbar {
-    max-width: 100% !important; /* Overrides the 800px limit */
-    width: 100%;
-    margin: 0;
-    .navbar {
-      position: fixed; /* Keeps it at the top */
-      top: 0;
-      z-index: 1000;
-      transition: 0.4s; /* This makes the shrinking look smooth! */
-      width: 100%;
-      margin: 0;
-    }
-    
-    /* Because the nav is now 'fixed', we need to push the content down 
-       so it doesn't hide behind the navbar */
-    body {
-      padding-top: 60px; 
-    }
-}
-
-#navbar {
-  padding: 80px 10px;
-  transition: 0.4s; /* smooth shrinking */
-  position: static;
+/* ===== FIXED HEADER ===== */
+.site-header {
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
-  left: 0;
+  background-color: #ffc8dd;
+  border-bottom: 3px solid #ff8fab;
 }
 
-body > *:not(#navbar) {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.site-header h1 {
+  text-align: center;
+  margin: 0;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  color: #482d38;
 }
 
-.navbar a{
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 100%;
+  background-color: #b5838d;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #b5838d;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+}
+
+.navbar li {
+  float: none;
+}
+
+.navbar a {
+  display: block;
   color: #fdf0f5;
   text-decoration: none;
-  padding:15px;
-  display:block;
-  text-align: center;
+  padding: 12px 24px;
+  font-weight: normal;
 }
 
-.navbar a:hover{
-  background-color:#9c7079;
+.navbar a:hover {
+  background-color: #9c7079;
+  color: #fdf0f5;
 }
-.navbar li{
-  float:left;
-}
-/* HEADINGS */
-h1 {
-  text-align: center;
-  background-color: #ffc8dd;
+
+/* ===== PAGE CONTENT WRAPPER ===== */
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 20px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #ff8fab;
-  margin-bottom: 30px;
-  border-radius: 15px;
 }
 
+/* ===== HEADINGS ===== */
 h2 {
   color: #b5838d;
   border-bottom: 2px solid #ffb3c6;
   padding-bottom: 5px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-/* PARAGRAPHS */
+h3 {
+  text-align: center;
+  margin-top: 50px;
+  color: #b5838d;
+}
+
+/* ===== PARAGRAPHS ===== */
 p {
   line-height: 1.6;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
-/* LIST */
-ul {
+/* ===== INTRO LIST (homepage) ===== */
+.intro-list {
   background-color: #ffe5ec;
-  padding: 15px;
+  padding: 15px 15px 15px 35px;
   border-radius: 10px;
-  width: 250px;
+  width: 260px;
   margin: 20px auto;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #ffb3c6;
+  border: 2px solid #ffb3c6;
 }
 
-/* IMAGES */
-img {
-  width: 200px;
-  height: 300px;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #ff8fab;
-  border-radius: 10px;
-  margin: 10px;
-  float: left; /* REQUIRED property */
-}
-
-/* CLEAR FLOAT (prevents layout issues) */
-br {
-  clear: both;
-}
-
-/* LINKS */
+/* ===== LINKS ===== */
 a {
   text-decoration: none;
   color: #c9184a;
@@ -146,7 +114,7 @@ a:hover {
   color: #ff4d6d;
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 input[type="button"] {
   background-color: #ff8fab;
   color: white;
@@ -155,132 +123,116 @@ input[type="button"] {
   margin: 20px 0;
   border-radius: 8px;
   cursor: pointer;
+  display: block;
 }
 
 input[type="button"]:hover {
   background-color: #ff4d6d;
 }
 
-/* BOOK SECTIONS (makes each book look like a card) */
-h2 + a + br + b + p {
-  display: block;
-  background-color: white;
-  padding: 15px;
-  margin: 20px 0;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #ffd6e0;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-/* OPTIONAL: CENTER CONTENT */
-body > * {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* FOOTER TEXT */
-h3 {
-  text-align: center;
-  margin-top: 50px;
-
-  /* GENRE GRID (for homepage) */
+/* ===== GENRE GRID (homepage) ===== */
 .genre-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 30px;
-  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 30px auto;
+  max-width: 1100px;
+  padding: 0 20px;
 }
 
-
-/* EACH GENRE CARD */
 .genre-card {
   background-color: white;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #ffd6e0;
+  border: 2px solid #ffd6e0;
   border-radius: 12px;
   padding: 15px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* IMAGE */
 .genre-card img {
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
-  margin-bottom: 10px;
+  object-position: center top;
+  float: none;
+  display: block;
+  margin: 0 0 12px 0;
+  border-radius: 8px;
+  border: 2px solid #ffb3c6;
 }
 
-/* TITLE */
 .genre-card h2 {
-  margin: 10px 0;
+  margin: 8px 0;
+  border-bottom: none;
+  font-size: 1.1rem;
 }
 
-/* DESCRIPTION */
 .genre-card p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  flex-grow: 1;
 }
 
-/* LINK BUTTON */
 .genre-card a {
   display: inline-block;
   margin-top: 10px;
   background-color: #ff8fab;
   color: white;
-  padding: 8px 15px;
+  padding: 8px 18px;
   border-radius: 8px;
+  font-weight: bold;
 }
 
-/* MOBILE FRIENDLY */
-@media (max-width: 800px) {
-  .genre-grid {
-    grid-template-columns: 1fr; /* stack on small screens */
-  }
-
-  /* GRID CONTAINER */
+/* ===== BOOK GRID (genre pages) ===== */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 30px 20px;
 }
 
-/* BOOK CARD */
 .book-card {
   background-color: white;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #ffd6e0;
+  border: 2px solid #ffd6e0;
   border-radius: 12px;
   padding: 15px;
-  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform 0.3s;
 }
 
-/* HOVER EFFECT */
 .book-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
-/* IMAGE INSIDE CARD */
 .book-card img {
-  width: 100%;
-  height: 300px;
+  width: 140px;
+  height: 210px;
   object-fit: cover;
-  float: none; /* override float from earlier */
-  margin: 0;
+  object-position: center top;
+  float: none;
+  display: block;
+  margin: 0 auto 12px auto;
+  border-radius: 8px;
+  border: 2px solid #ffb3c6;
 }
 
-/* TEXT */
+.book-card h2,
 .book-card h3 {
-  margin: 10px 0;
+  margin: 8px 0;
   color: #b5838d;
+  border-bottom: none;
+  font-size: 1rem;
 }
 
-/* BUTTON LINK STYLE */
+.book-card p {
+  font-size: 0.85rem;
+  flex-grow: 1;
+}
+
 .book-card a {
   display: inline-block;
   margin-top: 10px;
@@ -290,8 +242,51 @@ h3 {
   border-radius: 8px;
 }
 
-
-
-
+/* ===== PAGINATION ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0;
 }
+
+.pagination button {
+  background-color: #ff8fab;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Short Stack', cursive;
+  font-size: 1rem;
+}
+
+.pagination button:hover {
+  background-color: #ff4d6d;
+}
+
+.pagination button:disabled {
+  background-color: #ffb3c6;
+  cursor: default;
+}
+
+#page-indicator {
+  font-size: 0.95rem;
+  color: #b5838d;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 700px) {
+  .genre-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    padding-top: 130px;
+  }
 }
