@@ -1,4 +1,3 @@
-/* ===== RESET & BASE ===== */
 * {
   box-sizing: border-box;
 }
@@ -9,10 +8,9 @@ body {
   margin: 0;
   padding: 0;
   color: #482d38;
-  padding-top: 110px; /* space for fixed header */
+  padding-top: 110px;
 }
 
-/* ===== FIXED HEADER ===== */
 .site-header {
   position: fixed;
   top: 0;
@@ -31,7 +29,6 @@ body {
   color: #482d38;
 }
 
-/* ===== NAVBAR ===== */
 .navbar {
   width: 100%;
   background-color: #b5838d;
@@ -66,14 +63,12 @@ body {
   color: #fdf0f5;
 }
 
-/* ===== PAGE CONTENT WRAPPER ===== */
 .content {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* ===== HEADINGS ===== */
 h2 {
   color: #b5838d;
   border-bottom: 2px solid #ffb3c6;
@@ -87,13 +82,11 @@ h3 {
   color: #b5838d;
 }
 
-/* ===== PARAGRAPHS ===== */
 p {
   line-height: 1.6;
   margin: 10px 0;
 }
 
-/* ===== INTRO LIST (homepage) ===== */
 .intro-list {
   background-color: #ffe5ec;
   padding: 15px 15px 15px 35px;
@@ -103,7 +96,6 @@ p {
   border: 2px solid #ffb3c6;
 }
 
-/* ===== LINKS ===== */
 a {
   text-decoration: none;
   color: #c9184a;
@@ -114,7 +106,6 @@ a:hover {
   color: #ff4d6d;
 }
 
-/* ===== BUTTON ===== */
 input[type="button"] {
   background-color: #ff8fab;
   color: white;
@@ -130,7 +121,6 @@ input[type="button"]:hover {
   background-color: #ff4d6d;
 }
 
-/* ===== GENRE GRID (homepage) ===== */
 .genre-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -184,7 +174,6 @@ input[type="button"]:hover {
   font-weight: bold;
 }
 
-/* ===== BOOK GRID (genre pages) ===== */
 .book-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -242,7 +231,106 @@ input[type="button"]:hover {
   border-radius: 8px;
 }
 
-/* ===== PAGINATION ===== */
+.top-picks-table {
+  width: 90%;
+  max-width: 800px;
+  margin: 30px auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.top-picks-table caption {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #b5838d;
+  margin-bottom: 10px;
+}
+
+.top-picks-table th {
+  background-color: #ffb3c6;
+  color: #482d38;
+  padding: 10px 14px;
+  border: 2px solid #ff8fab;
+  text-align: left;
+}
+
+.top-picks-table td {
+  background-color: white;
+  padding: 10px 14px;
+  border: 2px solid #ffd6e0;
+  vertical-align: middle;
+}
+
+.top-picks-table tr:hover td {
+  background-color: #fff0f5;
+}
+
+.table-img {
+  width: 40px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ffb3c6;
+  float: none;
+  display: block;
+  flex-shrink: 0;
+}
+
+.table-book-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-label {
+  text-align: center;
+  font-weight: bold;
+  color: #b5838d;
+  margin-top: 30px;
+}
+
+.reading-order {
+  max-width: 500px;
+  margin: 10px auto 20px auto;
+  background-color: #ffe5ec;
+  border: 2px solid #ffb3c6;
+  border-radius: 10px;
+  padding: 15px 15px 15px 40px;
+  width: auto;
+}
+
+.reading-order li {
+  margin-bottom: 6px;
+}
+
+.surprise-btn {
+  background-color: #c9184a;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-family: 'Short Stack', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.surprise-btn:hover {
+  background-color: #ff4d6d;
+  transform: scale(1.05);
+}
+
+.genre-tag {
+  display: inline;
+  background-color: #ffc8dd;
+  color: #c9184a;
+  border: 1px solid #ff8fab;
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin: 4px;
+  font-size: 0.85rem;
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -276,7 +364,6 @@ input[type="button"]:hover {
   color: #b5838d;
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 700px) {
   .genre-grid {
     grid-template-columns: 1fr;

@@ -1,4 +1,3 @@
-// ===== TYPEWRITER EFFECT (homepage only) =====
 var i = 0;
 var txt = 'YA is a type of literature whose targeted audience ranges from 12-18 years old. Below you will find 3 different genres:';
 var speed = 50;
@@ -14,7 +13,12 @@ setTimeout(typeWriter, speed);
 }
 }
 
-// ===== BOOK PAGINATION =====
+function surpriseMe() {
+var genres = ['Fantasy.html', 'Romance.html', 'Thriller.html'];
+var pick = genres[Math.floor(Math.random() * genres.length)];
+window.location.href = pick;
+}
+
 var CARDS_PER_PAGE = 3;
 var currentPage = 1;
 
@@ -25,7 +29,6 @@ if (!grid) return;
 var cards = Array.from(grid.querySelectorAll('.book-card'));
 var totalPages = Math.ceil(cards.length / CARDS_PER_PAGE);
 
-// Build pagination controls
 var pagination = document.createElement('div');
 pagination.className = 'pagination';
 pagination.innerHTML =
@@ -63,7 +66,6 @@ showPage(cards, currentPage, totalPages);
 window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ===== INIT =====
 window.onload = function() {
 typeWriter();
 initPagination();

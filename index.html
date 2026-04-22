@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
      <link rel="stylesheet" href="styles.css">
      <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,11 +28,71 @@
     
     <b id="demo"></b>
 
-    <ul class="intro-list">
-      <li>Fantasy</li>
-      <li>Romance</li>
-      <li>Mystery/Thriller</li>
-    </ul>
+    <table class="top-picks-table">
+      <caption>⭐ Top Pick from Each Genre</caption>
+      <thead>
+        <tr>
+          <th>Genre</th>
+          <th>Book</th>
+          <th>Author</th>
+          <th>Vibe</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fantasy</td>
+          <td>
+            <div class="table-book-cell">
+              <img src="image/91h7R0ZFyLL._UF1000,1000_QL80_.jpg" alt="Six of Crows" class="table-img">
+              <span>Six of Crows</span>
+            </div>
+          </td>
+          <td>Leigh Bardugo</td>
+          <td>Heist + Magic</td>
+        </tr>
+        <tr>
+          <td>Romance</td>
+          <td>
+            <div class="table-book-cell">
+              <img src="image/The Summer I Turned Pretty.jpg" alt="The Summer I Turned Pretty" class="table-img">
+              <span>The Summer I Turned Pretty</span>
+            </div>
+          </td>
+          <td>Jenny Han</td>
+          <td>Summer + Love Triangle</td>
+        </tr>
+        <tr>
+          <td>Mystery / Thriller</td>
+          <td>
+            <div class="table-book-cell">
+              <img src="image/Good Girls Guide to Murder.jpg" alt="A Good Girl's Guide to Murder" class="table-img">
+              <span>A Good Girl's Guide to Murder</span>
+            </div>
+          </td>
+          <td>Holly Jackson</td>
+          <td>Crime + Small Town Secrets</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="section-label">New to YA? Try this reading order:</p>
+    <ol class="reading-order">
+      <li>A Good Girl's Guide to Murder — easy to get hooked</li>
+      <li>The Summer I Turned Pretty — light and emotional</li>
+      <li>Six of Crows — once you're ready for something epic</li>
+    </ol>
+
+    <div style="text-align:center; margin: 20px 0;">
+      <button class="surprise-btn" onclick="surpriseMe()">&#10024; Surprise Me &mdash; Pick a Genre!</button>
+    </div>
+
+    <div style="text-align:center; margin-bottom: 20px;">
+      <span class="genre-tag">Fantasy</span>
+      <span class="genre-tag">Romance</span>
+      <span class="genre-tag">Mystery</span>
+      <span class="genre-tag">Thriller</span>
+      <span class="genre-tag">YA</span>
+    </div>
 
 
     <div class="genre-grid">
@@ -64,4 +125,3 @@
 
     </body>
 </html>
-
